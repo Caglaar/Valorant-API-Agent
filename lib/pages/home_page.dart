@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:valorant_api/pages/home_page_body.dart';
-import 'package:valorant_api/pages/home_page_bottom.dart';
+import 'package:valorant_api/widgets/home_page/home_page_body.dart';
+import 'package:valorant_api/widgets/home_page/home_page_bottom.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

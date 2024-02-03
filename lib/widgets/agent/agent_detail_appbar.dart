@@ -12,7 +12,7 @@ class AgentDetailAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: double.infinity,
       height: 700 * 0.4,
       child: Stack(children: [

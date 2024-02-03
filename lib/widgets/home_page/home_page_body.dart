@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:valorant_api/models/agent_model.dart';
 import 'package:valorant_api/pages/agent_detail.dart';
-import 'package:valorant_api/pages/agent_detail_copy.dart';
 import 'package:valorant_api/services/valorant_api.dart';
 
 final agentListProvider = FutureProvider<List<AgentModel>>((ref) async {
