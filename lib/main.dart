@@ -1,30 +1,27 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:valorant_api/pages/home_page.dart';
+import 'package:provider/provider.dart';
+import 'package:valorant_api/setup_providers.dart';
+
 void main() {
-  runApp(const ProviderScope(child: MyApp()));
+  runApp(const MyApp());
 }
 
-final themeProvider = StateProvider<ThemeData>((ref) {
-  return ThemeData(
-    colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-    useMaterial3: true,
-  );
-});
-final titleProvider = StateProvider<String>((ref) {
-  return 'Valorant API';
-});
-
-class MyApp extends ConsumerWidget {
-  const MyApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context,WidgetRef ref) {
-    return MaterialApp(
-      title: ref.watch(titleProvider),
-      debugShowCheckedModeBanner: false,
-      theme: ref.watch(themeProvider),
-      home: const HomePage(),
+  Widget build(BuildContext context) {
+    return MultiProvider(
+      providers:SetupProviders.providers,
+      child: MaterialApp(
+          title: "Valorant API",
+          debugShowCheckedModeBanner: false,
+          theme: ThemeData(
+            colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.deepPurple),
+          ),
+          home: const HomePage(),
+        ),
     );
   }
 }

@@ -4,8 +4,8 @@ import 'package:valorant_api/widgets/agent/agent_cached_image.dart';
 import 'package:valorant_api/widgets/agent/agent_detail_abilitys.dart';
 import 'package:valorant_api/widgets/agent/agent_detail_appbar.dart';
 
-class AgentDetailPageCopy extends StatelessWidget {
-  const AgentDetailPageCopy({super.key,required this.agent});
+class AgentDetailPage extends StatelessWidget {
+  const AgentDetailPage({super.key,required this.agent});
   final AgentModel agent;
 
   @override

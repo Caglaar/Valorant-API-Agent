@@ -5,6 +5,7 @@ class AgentModel {
   final String description;
   final String developerName;
   final bool isPlayableCharacter;
+  final List<String> backgroundGradientColors;
   final String? fullPortrait;
   final String killfeedPortrait;
   final Role? role;
@@ -17,6 +18,7 @@ class AgentModel {
     required this.description,
     required this.developerName,
     required this.isPlayableCharacter,
+    required this.backgroundGradientColors,
     this.fullPortrait,
     required this.killfeedPortrait,
     this.role,
@@ -27,7 +29,7 @@ class AgentModel {
   @override
   String toString()
   {
-    return "name = $displayName,$abilities";
+    return "name = $displayName,$abilities renkler = $backgroundGradientColors";
   }
   factory AgentModel.fromJson(Map<String, dynamic> json) => AgentModel(
         uuid: json["uuid"],
@@ -36,6 +38,7 @@ class AgentModel {
         description: json["description"],
         developerName: json["developerName"],
         isPlayableCharacter: json["isPlayableCharacter"],
+        backgroundGradientColors: List<String>.from(json["backgroundGradientColors"].map((x) => x)),
         fullPortrait: json["fullPortrait"],
         killfeedPortrait: json["killfeedPortrait"],
         role: json["role"] == null ? null : Role.fromJson(json["role"]),
@@ -50,6 +53,7 @@ class AgentModel {
         "description": description,
         "developerName": developerName,
         "isPlayableCharacter": isPlayableCharacter,
+        "backgroundGradientColors": List<dynamic>.from(backgroundGradientColors.map((x) => x)),
         "fullPortrait": fullPortrait,
         "killfeedPortrait": killfeedPortrait,
         "role": role?.toJson(),
