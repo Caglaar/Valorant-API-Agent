@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:valorant_api/consts/colors.dart';
 import 'package:valorant_api/models/agent_model.dart';
 
 class AbilityCard extends StatelessWidget {
@@ -26,8 +27,8 @@ class AbilityCard extends StatelessWidget {
             clipBehavior: Clip.antiAlias,
             margin: EdgeInsets.zero,       
             child: ExpansionTile(
-              collapsedBackgroundColor: Colors.tealAccent[700],
-              backgroundColor: Colors.tealAccent[700],
+              collapsedBackgroundColor: ProjectColor.barColor,
+              backgroundColor: ProjectColor.barColor,
               leading: Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: FittedBox(
@@ -47,7 +48,7 @@ class AbilityCard extends StatelessWidget {
               ),
               title: Text(
                 agentAbilities.displayName.toUpperCase(),
-                style: const TextStyle(fontWeight: FontWeight.bold,),
+                style: const TextStyle(fontWeight: FontWeight.bold,color: ProjectColor.textColor),
                 maxLines: 1,
                 overflow: TextOverflow.fade,
                 

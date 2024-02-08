@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
           title: "Valorant API",
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
-            colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.deepPurple),
+            colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.blueGrey),
           ),
           home: const HomePage(),
         ),

@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:valorant_api/consts/colors.dart';
 import 'package:valorant_api/pages/agent_detail.dart';
 import 'package:valorant_api/view_models/agent_provider.dart';
 
@@ -32,8 +33,8 @@ class HomePageAgentBody extends StatelessWidget {
                     );
                   },
                   child: Card(
-                    color: currentAgent.backgroundGradientColors.isNotEmpty ? Color(int.parse("0x${currentAgent.backgroundGradientColors[1]}")) : Colors.tealAccent[700],
-                    shadowColor: Colors.tealAccent[700],
+                    color: currentAgent.backgroundGradientColors.isNotEmpty ? Color(int.parse("0x${currentAgent.backgroundGradientColors[2]}")) : Colors.tealAccent[700],
+                    shadowColor: ProjectColor.barColor,
                     child: CachedNetworkImage(imageUrl: currentAgent.displayIcon),
                   ),
                 );

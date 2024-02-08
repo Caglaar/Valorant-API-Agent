@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:valorant_api/consts/colors.dart';
 import 'package:valorant_api/models/agent_model.dart';
 
 class AgentDetailAppBar extends StatelessWidget {
@@ -19,7 +20,7 @@ class AgentDetailAppBar extends StatelessWidget {
         Container(
           width: double.infinity,
           height: 700 * 0.4,
-          color: Colors.tealAccent[700],
+          color: ProjectColor.barColor,
           child: CachedNetworkImage(
             imageUrl: agent.killfeedPortrait,
             progressIndicatorBuilder: (context, url, downloadProgress) =>
@@ -41,11 +42,11 @@ class AgentDetailAppBar extends StatelessWidget {
             children: [
               Text(
                 agent.displayName.toUpperCase(),
-                style: const TextStyle(fontSize: 40),
+                style: const TextStyle(fontSize: 40,color: ProjectColor.textColor),
               ),
               Text(
                 agent.role?.displayName.toString() ?? '',
-                style: const TextStyle(fontSize: 30),
+                style: const TextStyle(fontSize: 30,color: ProjectColor.textColor),
               ),
             ],
           ),
