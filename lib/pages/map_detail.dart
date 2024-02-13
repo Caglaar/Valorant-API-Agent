@@ -12,7 +12,7 @@ class MapDetailPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: ProjectColor.barColor,
-        title: Text(currentMap.displayName,style: TextStyle(fontSize: 40),),
+        title: Text(currentMap.displayName,style: const TextStyle(fontSize: 40),),
         ),
       body: Column(
         children: [

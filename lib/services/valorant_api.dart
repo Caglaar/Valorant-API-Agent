@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:valorant_api/models/agent_model.dart';
 import 'package:valorant_api/models/map_model.dart';
+import 'package:valorant_api/models/weapons_model.dart';
 
 class AgentGet {
   static List<AgentModel> fromJson(dynamic json) {
@@ -22,10 +23,10 @@ class MapGet {
   }
 }
 class WeaponGet {
-  static List<AgentModel> fromJson(dynamic json) {
+  static List<WeaponModel> fromJson(dynamic json) {
     return json['data']
-        .where((data) => data['isPlayableCharacter'] == true)
-        .map<AgentModel>((data) => AgentModel.fromJson(data))
+        .where((data) => data['displayIcon'] != null)
+        .map<WeaponModel>((data) => WeaponModel.fromJson(data))
         .toList();
   }
 }
@@ -54,12 +55,12 @@ class ValorantApi{
       rethrow;
     }
   }
-  static Future<List<AgentModel>> getWeaponData() async 
+  static Future<List<WeaponModel>> getWeaponData() async 
   {
     try {
       Response response = await Dio().get("${_url}weapons");
       final data = response.data;
-      return AgentGet.fromJson(data);
+      return WeaponGet.fromJson(data);
     } catch (e) {
       rethrow;
     }

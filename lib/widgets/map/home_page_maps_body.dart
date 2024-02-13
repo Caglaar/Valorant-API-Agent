@@ -1,7 +1,5 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:valorant_api/consts/colors.dart';
 import 'package:valorant_api/pages/map_detail.dart';
 import 'package:valorant_api/view_models/maps_provider.dart';
 import 'package:valorant_api/widgets/map/map_card.dart';
