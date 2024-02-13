@@ -13,8 +13,10 @@ class HomePageAgentBody extends StatelessWidget {
   Widget build(BuildContext context) {
     final provider=Provider.of<AgentProvider>(context,listen: false);
       provider.getAgentList();
-        return Consumer<AgentProvider>(
-          builder: (context,agentProvider,child) {
+        return Consumer<AgentProvider>
+        (
+          builder: (context,agentProvider,child) 
+          {
             return GridView.builder(
               itemCount: agentProvider.agentList.length,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(

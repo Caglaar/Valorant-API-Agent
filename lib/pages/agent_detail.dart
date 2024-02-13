@@ -67,7 +67,7 @@ class AgentDetailPage extends StatelessWidget {
                   padding: const EdgeInsets.all(25.0),
                   child: IconButton(
                     tooltip: 'Go back',
-                    icon: const Icon(Icons.arrow_back_ios,color: Colors.black,),
+                    icon: const Icon(Icons.arrow_back_ios,color: Colors.white,),
                     onPressed: () {
                       Navigator.pop(context);
                     },

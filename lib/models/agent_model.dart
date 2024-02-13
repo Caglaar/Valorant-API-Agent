@@ -25,7 +25,6 @@ class AgentModel {
     required this.abilities,
   });
 
-  get state => null;
   @override
   String toString()
   {
