@@ -1,23 +1,18 @@
-# Flutter Valorant Api 
-## App Using
-<table>
-  <tr>
-    <td>Agents</td>
-    <td>Maps</td>
-    <td>Weapons</td>
-  </tr>
-  <tr>
-     <td>![AgentPage](https://github.com/Caglaar/Valorant-API-Agent/assets/100859025/2ed6b283-4436-4c80-b411-fa6b4c9717f7) </td>
-     <td>![MapPage](https://github.com/Caglaar/Valorant-API-Agent/assets/100859025/851abebf-d1b8-4ea0-87a5-83e9995a6146) </td>
-     <td>![WeaponPage](https://github.com/Caglaar/Valorant-API-Agent/assets/100859025/1b0e47cc-e2c1-4a00-9680-8548db7e28e9) </td>
-  </tr>
-</table>
+#           Flutter Valorant Api 
+##                 App Using
+
+### Agents Page
+![AgentPage](https://github.com/Caglaar/Valorant-API-Agent/assets/100859025/81deb9de-490b-4a7e-a892-f66185a75596)
+### Maps Page
+![MapPage](https://github.com/Caglaar/Valorant-API-Agent/assets/100859025/7082f120-e840-4e32-9edf-6c3df923115b)
+### Weapons Page
+![WeaponPage](https://github.com/Caglaar/Valorant-API-Agent/assets/100859025/76274f3d-489a-45ca-9dda-21d0b1c0131d)
 
 ## Technology Products ,Libraries and Architectural
 - Flutter
-  -Provider State Management (https://pub.dev/packages/provider)
-  -Valorant API (https://valorant-api.com)
-  -Clean Architectural
+  - Provider State Management (https://pub.dev/packages/provider)
+  - Valorant API (https://valorant-api.com)
+  - Clean Architectural
 
   
 
