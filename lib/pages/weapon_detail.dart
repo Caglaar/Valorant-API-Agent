@@ -17,43 +17,46 @@ class WeaponDetailPage extends StatelessWidget {
         title: Text(currentWeapon.displayName,style: const TextStyle(fontSize: 40),),
         backgroundColor: ProjectColor.barColor,
       ),
-      body: Column(
-        children: [
-          WeaponCard(currentWeapon: currentWeapon,control: 1,),
-          const SpaceWidget(),
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 25),
-            child: Center(
-              child: Text(
-                "#  Shop İnformation  #",
-                style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: ProjectColor.barColor),
+      body: SingleChildScrollView(
+        physics: NeverScrollableScrollPhysics(),
+        child: Column(
+          children: [
+            WeaponCard(currentWeapon: currentWeapon,control: 1,),
+            const SpaceWidget(),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 25),
+              child: Center(
+                child: Text(
+                  "#  Shop İnformation  #",
+                  style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: ProjectColor.barColor),
+                ),
               ),
             ),
-          ),
-          ShopInfoCard(currentWeapon: currentWeapon,),
-          const SpaceWidget(),
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 25),
-            child: Center(
-              child: Text(
-                "#  Stat İnformation  #",
-                style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: ProjectColor.barColor),
+            ShopInfoCard(currentWeapon: currentWeapon,),
+            const SpaceWidget(),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 25),
+              child: Center(
+                child: Text(
+                  "#  Stat İnformation  #",
+                  style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: ProjectColor.barColor),
+                ),
               ),
             ),
-          ),
-          StatInfoCard(currentWeapon: currentWeapon),
-          const SpaceWidget(),
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 25),
-            child: Center(
-              child: Text(
-                "#  Damage Range  #",
-                style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: ProjectColor.barColor),
+            StatInfoCard(currentWeapon: currentWeapon),
+            const SpaceWidget(),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 25),
+              child: Center(
+                child: Text(
+                  "#  Damage Range  #",
+                  style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: ProjectColor.barColor),
+                ),
               ),
             ),
-          ),
-          DamageRangeCard(currentWeapon: currentWeapon)
-        ],
+            DamageRangeCard(currentWeapon: currentWeapon)
+          ],
+        ),
       ),
     );
   }

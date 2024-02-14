@@ -8,44 +8,41 @@ class StatInfoCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 150,
-      child: Card(
-        color: ProjectColor.barColor.withOpacity(0.2),
-        child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  const Text("Fire Rate ", style: TextStyle(fontSize: 24,color: ProjectColor.textColor)),
-                  Text(currentWeapon.weaponStats!.fireRate.toString(), style: const TextStyle(fontSize: 24,color: ProjectColor.textColor)),
-                ],
-              ),
+    return Card(
+      color: ProjectColor.barColor.withOpacity(0.2),
+      child: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Text("Fire Rate ", style: TextStyle(fontSize: 24,color: ProjectColor.textColor)),
+                Text(currentWeapon.weaponStats!.fireRate.toString(), style: const TextStyle(fontSize: 24,color: ProjectColor.textColor)),
+              ],
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  const Text("Equip Time ", style: TextStyle(fontSize: 24,color: ProjectColor.textColor)),
-                  Text(currentWeapon.weaponStats!.equipTimeSeconds.toString(), style: const TextStyle(fontSize: 24,color: ProjectColor.textColor)),
-                ],
-              ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Text("Equip Time ", style: TextStyle(fontSize: 24,color: ProjectColor.textColor)),
+                Text(currentWeapon.weaponStats!.equipTimeSeconds.toString(), style: const TextStyle(fontSize: 24,color: ProjectColor.textColor)),
+              ],
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  const Text("Reload Time ", style: TextStyle(fontSize: 24,color: ProjectColor.textColor)),
-                  Text(currentWeapon.weaponStats!.reloadTimeSeconds.toString(), style: const TextStyle(fontSize: 24,color: ProjectColor.textColor)),
-                ],
-              ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Text("Reload Time ", style: TextStyle(fontSize: 24,color: ProjectColor.textColor)),
+                Text(currentWeapon.weaponStats!.reloadTimeSeconds.toString(), style: const TextStyle(fontSize: 24,color: ProjectColor.textColor)),
+              ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

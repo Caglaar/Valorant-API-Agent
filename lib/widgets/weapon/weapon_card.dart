@@ -13,7 +13,7 @@ class WeaponCard extends StatelessWidget {
       children: [
         SizedBox(
           height: 200,
-          width: 2000,
+          width: MediaQuery.sizeOf(context).width,
           child: Card(
             color: ProjectColor.barColor.withOpacity(0.2),
             child: CachedNetworkImage(imageUrl: currentWeapon.displayIcon),
